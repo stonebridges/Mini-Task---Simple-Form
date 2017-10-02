@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app="formExample">
+    <head>
+        <title>Simple Form</title>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <script src="js/angular.js" ></script>
+        <script src="js/formjs.js"></script>
+    </head> 
+
+    <body>
+
+        <div ng-controller="formCtrl">
+        <div class="title">Simple Form</div>
+        <form  name="userForm"  class="well form-search" >
+        <table width="80%" border="0" cellspacing="0" cellpadding="3">
+          <tr>
+            <td width="11%">Name</td>
+            <td width="4%">:</td>
+            <td width="85%">
+            <input type="text" ng-model="name" class="form-control" id="select_width_dd" placeholder="Name" required >
+            </td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td>:</td>
+            <td>
+            <input type="email" ng-model="email" class="form-control" id="select_width_dd" placeholder="Email" required >
+            </td>
+          </tr>
+          <tr>
+            <td>Contact Number</td>
+            <td>:</td>
+            <td>
+            <input type="tel" ng-model="contact" class="form-control" id="select_width_dd" placeholder="Contact" required >
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>
+            <button type="submit" class="btn btn-primary" ng-click="formsubmit(userForm.$valid)" ng-disabled="userForm.$invalid"> Submit </button>
+            &nbsp;
+            <input type="reset" class="btn btn-primary" value=" Reset ">
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td colspan="3">
+            <pre class="style5" ng-model="result">
+              {{result}}
+            </pre>            
+            </td>
+          </tr>
+        </table>
+        </form>
+        </div>
+        
+    </body>
+
+</html>
