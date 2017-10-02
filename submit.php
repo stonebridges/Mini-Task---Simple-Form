@@ -8,7 +8,7 @@ $data = json_decode($post_date);
 
 ?>
 
-Result data:
+You submitted the following:
 
 Name: <?=$data->name; ?> 
 Email: <?=$data->email; ?> 
